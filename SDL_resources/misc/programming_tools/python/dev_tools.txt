@@ -1,0 +1,4 @@
+
+I am allergic against bloatwares and large sized files.
+
+for gamedev python 3.4.3 and pygame 1.9.2 is is amply and largely sufficient.
