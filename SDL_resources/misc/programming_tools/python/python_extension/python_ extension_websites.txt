@@ -1,0 +1,24 @@
+first of all, ensure that you add "C:\MingW\bin" to your PATH in Environment variables.
+
+to build a python extenion in cmd change to current directory "cd" and type:
+setup.py build --compiler=mingw32
+
+mingw32 -luctr error:
+if you encounter mingw32 error:"mingw32/bin/ld.exe: cannot find -lucrt"
+justt take any dll file and rename it to "ucrt.dll" and put it in the compiler search path,
+or grab "ucrtbase.dll" from python install directory and rename it to "ucrt.dll".
+
+python ucrt dll:
+https://stevedower.id.au/blog/building-for-python-3-5
+
+python distutils.cfg compiler path:
+https://stackoverflow.com/questions/18345132/python-does-not-consider-distutils-cfg
+
+python setup compiler options:
+https://pythonextensionpatterns.readthedocs.io/en/latest/compiler_flags.html
+https://stackoverflow.com/questions/6928110/how-may-i-override-the-compiler-gcc-flags-that-setup-py-uses-by-default
+https://shwina.github.io/custom-compiler-linker-extensions/
+
+configure python to use gcc compiler:
+https://stackoverflow.com/questions/3297254/how-to-use-mingws-gcc-compiler-when-installing-python-package-using-pip
+https://docs.python.org/2/install/#location-and-names-of-config-files
